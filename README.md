@@ -25,17 +25,25 @@ The solution to most of these problems would be an automated aerotow, realized b
 
 #### Towing at the Airfield
 
-For airport use, the automatic aerotow would mostly fly along a predetermined trajectory, towing the glider until the crew disconnects. This base function could evolve, with subsequent versions possibly using search algorithms or equipment like a thermal radar to find rising currents. However, this requires a more complex technical solution.
+For airport use, the automatic aerotow would mostly fly along a predetermined trajectory, towing the glider until the crew disconnects. This base function could evolve, with subsequent versions possibly using search algorithms or equipment like a thermal radar to find rising thermal currents. However, this requires a more complex technical solution.
 
 #### Towing from Alternative Landings
 
 Even experienced glider pilots occasionally miss their landing at the target airport during cross-country flights. The solution is either to disassemble the glider and transport it back to the airport or (if conditions allow) to use a powered aircraft to take off with the glider in tow. The use of powered aircraft is significantly more convenient, but this option is rarely used due to the cost of the tow plane's independent flight.
+
+In addition, in some cases, the size of the area, which would not be sufficient for the safe start of both aircraft, can prevent this aerotow mode. With the currently used technology, the longest takeoff is for the towing aircraft, which has significantly worse aerodynamic properties than a glider. In general, the parameters of powered aircraft are not very optimized for towing of gliders, and the working points in the flight envelope of both aircraft have significantly different parameters in aerotowing. This leads, among other things, to the need for a long take-off runway, to increased consumption of fuel due to sub-optimal loading, etc. At the same time, it is currently possible to design an aircraft designed and with its parameters optimized for use in aerofoil. It is also likely that an aircraft designed in this way will have a lower purchase price and mainly operating costs than the Zlín aircraft often used today with a power of approximately 134 kW.
+
+In addition to sports use, this mode also has the option of transporting cargo. Because a towed aircraft does not have to be a manned aircraft at all, but can easily transport goods between logistics hubs where other means of transport are complicated.
 
 #### In-flight Towing
 
 Another possible use for precise automated aircraft is the initiation of aerotowing already at a safe altitude. In-flight towing would be a completely new application for unmanned vehicles, not achievable by conventional aircraft. 
 
 ![Towing Eye with Manipulative Wings for In-flight Connection](https://your_image_link_here)
+
+In this case, instead of the standard tow ring, a towing attachment would be fitted, which would contain an identification target and a hook for the tow rope.
+
+The tow rope from the towing drone would then be fitted with a semi-automatic delta wing with controllable flaps. The towing rope adjusted in this way would allow gentle manipulation of the towing eye and its insertion into the hook on the attachment even during flight. Subsequently, the glider could be towed again without landing. The additional attachment on the towing device also increases the safety of the entire system, as the glider pilot does not lose the opportunity to disconnect from the towing aircraft at any time.
 
 ### Construction of an Unmanned Aerotow 
 
@@ -49,7 +57,7 @@ There are several earlier aircraft designs that have interesting properties for 
 
 - [Alexander Lippisch's Aerodyne](https://www.reddit.com/r/aviation/comments/68ntd4/alexander_lippischs_aerodyne_a_wingless/) - Enclosed propellers, high safety, and vertical takeoff capability.
 - [Edgley Optica](https://en.wikipedia.org/wiki/Edgley_Optica) - An enclosed power unit with a large diameter likely resulting in higher efficiency at low speeds.
-- [Nemeth Parasol](https://en.wikipedia.org/wiki/Nemeth_Parasol) - - Circular wing with a high stall angle, resulting in high safety as it is almost impossible for such an aircraft to get "hung" by a towed glider.
+- [Nemeth Parasol](https://en.wikipedia.org/wiki/Nemeth_Parasol) - Circular wing with a high stall angle, resulting in high safety as it is almost impossible for such an aircraft to get "hung" by a towed glider.
 - [Vought V-173](https://en.wikipedia.org/wiki/Vought_V-173) - Similar advantages as the previous circular wing but more efficient due to large propeller diameters, which also eliminate induced drag on the wing edge.
 
 However, none of these designs is suitable for direct use. It would be more advantageous to modify construction to better suit unmanned means, making it a combination of these alternative solutions.
@@ -60,9 +68,7 @@ At the beginning of glider towing, it is necessary to stabilize the roll as late
 
 [![Auxiliary device for glider stabilization at take-off](cs:designs:robots:glider_wing_helper.png)](cs:designs:robots:glider_wing_helper.png)
 
-The auxiliary device can be mechanically attached to the end of the wing or with a pneumatic suction cup. Since the take-off run duration, after which the glider's aerodynamic control begins to function, is on the order of a few seconds. It is essential that the device is reliably detached after this time, ensuring no subsequent incident.
-
-
+The auxiliary device can be mechanically attached to the end of the wing or with a pneumatic suction cup. The take-off run duration, after which the glider's aerodynamic control begins to function, is on the order of a few seconds. It is essential that the device is reliably detached after this time, ensuring no subsequent incident.
 
 ### Tasks to Address
 
@@ -73,17 +79,15 @@ One of the main conceptual issues is the organization of the aerotow management 
 
 ### Algorithmic Challenges
 
-  * Simulation model of the aircraft [Phoenix](http://phoenixair.cz/Phoenix_Air_main.htm) or [ΦNIX](https://cs.wikipedia.org/wiki/%CE%A6NIX)
-  * Simulation using the computational engine from [Flightgear](http://www.flightgear.org/)
   * Detection of a detached glider from the aerotow
 
-### Proposed Model Situations and Solutions
+#### Proposed Model Situations and Solutions
 
   * Deviation from the tow aircraft
     * Warning in the pilot's cockpit of the glider.
     * Automatic disconnection of the tow cable
   * Inability to disconnect the rope from the glider.
-    * Remote disconnection of the rope from the tow aircraft, breaking of the towing safety device.
+    * Remote disconnection of the rope from the tow aircraft, breaking of the towing safety device (pull fuse).
   * Loss of thrust on takeoff
     * Warning about the situation in the pilot's cockpit of the glider
     * Disconnection of the tow cable after confirmation by the glider pilot or disconnection of the tow cable by the pilot.
