@@ -1,12 +1,12 @@
 # TF-AEROTOW01 - Idea of technology to towing Gliders with Autonomous Aircraft
 
-In the operation of gliders at sporting or recreational airfields, gliders are transported to the essential altitude either by aerotowing or by a ground winch. Both methods have a significant number of disadvantages. 
+In the operation of gliders at sporting or recreational airfields, gliders are transported to the essential altitude either by aerotowing or by a ground winch. Both methods have a significant number of disadvantages.
 
 ### Conventional Towing Methods
 
-In the winch case, it's the limited height to which the aircraft can be transported, and the glider is more stressed because the pull is not perpendicular to the lift. Furthermore, this method of towing is relatively risky and requires extensive personnel. 
+In the winch case, it's the limited height to which the aircraft can be transported, and the glider is more stressed because the pull is not perpendicular to the lift. Furthermore, this method of towing is relatively risky and requires extensive personnel.
 
-The situation is slightly better for aerotowing as it's not limited by duration and is also more variable. Its primary disadvantage, however, is the relatively high cost. This is caused by the operational and maintenance costs of the tow plane (fuel consumption and especially the hourly rate of the tow plane). 
+The situation is slightly better for aerotowing as it's not limited by duration and is also more variable. Its primary disadvantage, however, is the relatively high cost. This is caused by the operational and maintenance costs of the tow plane (fuel consumption and especially the hourly rate of the tow plane).
 
 As a result, the cost of aerotowing has been rising. Therefore, unlike in the past, gliders are practically never towed after landing from a field, and transfers between airports are minimized.
 
@@ -37,15 +37,15 @@ In addition to sports use, this mode also has the option of transporting cargo. 
 
 #### In-flight Towing
 
-Another possible use for precise automated aircraft is the initiation of aerotowing already at a safe altitude. In-flight towing would be a completely new application for unmanned vehicles, not achievable by conventional aircraft. 
+Another possible use for precise automated aircraft is the initiation of aerotowing already at a safe altitude. In-flight towing would be a completely new application for unmanned vehicles, not achievable by conventional aircraft.
 
-![Towing Eye with Manipulative Wings for In-flight Connection](https://your_image_link_here)
+![Towing Eye with Manipulative Wings for In-flight Connection](doc/img/towing_loop.png)
 
 In this case, instead of the standard tow ring, a towing attachment would be fitted, which would contain an identification target and a hook for the tow rope.
 
 The tow rope from the towing drone would then be fitted with a semi-automatic delta wing with controllable flaps. The towing rope adjusted in this way would allow gentle manipulation of the towing eye and its insertion into the hook on the attachment even during flight. Subsequently, the glider could be towed again without landing. The additional attachment on the towing device also increases the safety of the entire system, as the glider pilot does not lose the opportunity to disconnect from the towing aircraft at any time.
 
-### Construction of an Unmanned Aerotow 
+### Construction of an Unmanned Aerotow
 
 Apart from the ground control station, which is not significantly different from the standard concept used for UAVs, several specifics are related to the flight mode.
 
@@ -66,7 +66,7 @@ However, none of these designs is suitable for direct use. It would be more adva
 
 At the beginning of glider towing, it is necessary to stabilize the roll as lateral aerodynamic control does not work. This problem is solved by an assistant holding the aircraft's wing during take-off. Alternatively, in accordance with regulations (although less safe and practical), it's also possible to start with the wing on the ground. In the case of autonomous aerotowing, however, this could be addressed with a stabilization device generating lift, as illustrated in the following image:
 
-[![Auxiliary device for glider stabilization at take-off](cs:designs:robots:glider_wing_helper.png)](cs:designs:robots:glider_wing_helper.png)
+![Auxiliary device for glider stabilization at takeoff](doc/img/glider_wing_helper.png)
 
 The auxiliary device can be mechanically attached to the end of the wing or with a pneumatic suction cup. The take-off run duration, after which the glider's aerodynamic control begins to function, is on the order of a few seconds. It is essential that the device is reliably detached after this time, ensuring no subsequent incident.
 
@@ -112,4 +112,3 @@ If you would like to collaborate on this conceptual proposal, please contact the
   * [Regulation L2 ADDENDUM Q – TOWING RULES](http://lis.rlp.cz/predpisy/predpisy/dokumenty/L/L-2/data/effective/doplQ.pdf)
   * [Open source airplane](http://makerplane.org/)
   * [Siemens electric aerotow](https://electrek.co/2017/04/04/all-electric-plane-record-top-speed/)
-
