@@ -44,6 +44,7 @@ Another possible use for precise automated aircraft is the initiation of aerotow
 In this case, instead of the standard tow ring, a towing attachment would be fitted, which would contain an identification target and a hook for the tow rope.
 
 The tow rope from the towing drone would then be fitted with a semi-automatic delta wing with controllable flaps. The towing rope adjusted in this way would allow gentle manipulation of the towing eye and its insertion into the hook on the attachment even during flight. Subsequently, the glider could be towed again without landing. The additional attachment on the towing device also increases the safety of the entire system, as the glider pilot does not lose the opportunity to disconnect from the towing aircraft at any time.
+A similar concept has been [already demonstrated](https://www.youtube.com/watch?v=cQNCSbyyAkc) by [Magpie Aviation](https://www.magpieaviation.com/)
 
 ### Construction of an Unmanned Aerotow
 
